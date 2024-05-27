@@ -1,18 +1,10 @@
 //your JS code here. If required.
- // get the element where the time is to be displayed
-	let timerDisplay=document.getElementById("timer");
 
-//set the current date and time 
-let currentDate=new Date();
-
-//update the time in every second 
+let displayTime = document.getElementById("timer");
+let currentTime = new Date();
 setInterval(
 	function(){
-		//get the current date and time 
-		currentDate=new Date();
-
-		//update the timer Display 
-		timerDisplay.innerHTML=currentDate.tolocaleString();
-		
-	},1000
+		currentTime = new Date();
+		displayTime.innerHTML = currentTime.toLocaleString();
+	}, 1000
 );
